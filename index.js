@@ -13,43 +13,47 @@ function myFunction(){
     li.appendChild(node);
     document.getElementById("list").appendChild(li);
     students.push(text)
+    
 }
-// console.log(students)
+console.log(students)
 let submit = document.querySelector(".btn2")
 let divOl = document.getElementById("contain")
-// console.log(submit)
+
     submit.addEventListener("click", function(){
         let numInputs = document.getElementById("nums").value
-        console.log(numInputs)
-    if (numInputs == 1){
-        for (let i=0; i<numInputs; i++){
-            let ol1 = document.createElement("ol")
-            // let li1 = document.createElement("li")
-            if (students.length = 2){
+        
+        let numInput = parseInt(numInputs)
+       
+        
+        for (let i=1; i<=numInput; i++){
+            let h3 = document.createElement("h4")
+            h3.innerText = `Team ${i}`
+            let orderList = document.createElement("ul")
+            
+        
+            for (let i=0; i<numInput; i++){
+                let list = document.createElement("li")
                 for (let i=0; i<students.length; i++){
-            let li1 = document.createElement("li")
-                    li1.innerText = students[i]
-                ol1.appendChild(li1)
+                list.innerText = students[i]
+                orderList.appendChild(list)
 
                 }
+        divOl.appendChild(h3)
+        divOl.appendChild(orderList)
+
+                
             }
-            divOl.appendChild(ol1)
+            
         }
-    }
+        console.log(divOl)
     
     })
-// function myTeam(){
-//     let numInputs = document.querySelector("#quantity").value;
-//     if (numInputs === 1){
-//         // for (let i=0; i<numInputs; i++){
-//         //     let ol = 
-//         // }
-//         console.log("this is one")
-//     } else if (numInputs === 2){
-//         console.log("this is 2")
-//     }
     
-// }
-// console.log
+    
+    
+    // function lists(){
+    //     let list = document.createElement("li")
 
+    // }
+    
     
