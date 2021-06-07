@@ -9,9 +9,10 @@ function myFunction(){
         text += inputs[i].value;
     }
     let li = document.createElement("li");
+    li.classList.add("list-group-item")
     let node = document.createTextNode(text);
     li.appendChild(node);
-    document.getElementById("list").appendChild(li);
+    document.querySelector(".list-group").appendChild(li);
     students.push(text)
     
 }
@@ -29,15 +30,14 @@ let divOl = document.getElementById("contain")
             let h3 = document.createElement("h4")
             h3.innerText = `Team ${i}`
             let orderList = document.createElement("ul")
-            
-        
-            for (let i=0; i<numInput; i++){
+            for (let k=0; k<students.length; k++){
                 let list = document.createElement("li")
-                for (let i=0; i<students.length; i++){
-                list.innerText = students[i]
+                list.innerText = students[k]
+                
+                console.log(students)
+                
                 orderList.appendChild(list)
-
-                }
+            }
         divOl.appendChild(h3)
         divOl.appendChild(orderList)
 
@@ -45,9 +45,8 @@ let divOl = document.getElementById("contain")
             }
             
         }
-        console.log(divOl)
     
-    })
+    )
     
     
     

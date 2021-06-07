@@ -19,25 +19,32 @@
     <title>Hello, world!</title>
   </head>
   <body>
+    
     <h1>Hello, world!</h1>
     <!-- ----------------------------------------------------------------------------------------------------- -->
-
-    <form>
-      First and Last name:<br />
-      <input type="text" name="firstName" id="fName" />
-    </form>
-    <br />
-    <button type="submit" onclick="myFunction()">Submit</button>
+    <div class="container">
+      <div class="row row-cols-2"></div>
+      <div class="col">
+      
+        First and Last name:<br />
+        <input type="text" name="firstName" id="fName" />
+      
+      <br />
+      <button type="submit" onclick="myFunction()">Submit</button>
+    </div>
+    <div class="col">
+      <!-- <form> -->
+        <label for="quantity">Teams</label>
+        <input type="number" id="nums" name="quantity" />
+      <!-- </form> -->
+      <button type="submit" class="btn2">Submit</button>
+      </div>
+    </div>
+  </div>
 
     <div id="container">
-      <ul id="list"></ul>
+      <ul class="list-group"></ul>
     </div>
-
-    <form>
-      <label for="quantity">Number of Teams you want</label>
-      <input type="number" id="nums" name="quantity" />
-    </form>
-    <button type="submit" class="btn2">Submit</button>
 
     <div id="contain">
       <!-- <ul id="list1"></ul> -->
